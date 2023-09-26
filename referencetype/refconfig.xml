@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.springcore.referencetype.SecondClass" name="secondref">
+		
+		<property name="num2">
+			<value>100</value>
+		</property>
+	
+	</bean>
+	<bean class="com.springcore.referencetype.FirstClass" name="firstref" p:num1="200" p:ob-ref="secondref" />
+		<!--
+		<property name="num1" value="90"/>
+		
+		<property name="ob">
+			<ref bean="secondref"/>// 1. using ref as an element
+			//we can inject B class object in A class property
+		</property>
+		-->
+		<!-- 2. using ref as an attribute
+		<property name="ob" ref="secondref"/> 
+		
+	</bean>
+	-->
+</beans>
