@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
+	<bean class="com.springcore.auto.wire.annotation.Address" name="address">
+	
+		<property name="street">
+			<value>Hinjwadi High Streets</value>
+		</property>
+		<property name="city">
+			<value>Pune City</value>
+		</property>
+		
+	</bean>
+	<bean class="com.springcore.auto.wire.annotation.Address" name="address1">
+	
+		<property name="street">
+			<value>Balewadi High Streets</value>
+		</property>
+		<property name="city">
+			<value>Baner</value>
+		</property>
+		
+	</bean>
+	<bean class="com.springcore.auto.wire.annotation.Address" name="address2">
+	
+		<property name="street">
+			<value>Connaught High Streets</value>
+		</property>
+		<property name="city">
+			<value>Delhi</value>
+		</property>
+		
+	</bean>
+	<!-- 
+		 by using @autowired annotation
+	-->
+	<bean class="com.springcore.auto.wire.annotation.Employee" name="emp1" />
+	
+</beans>

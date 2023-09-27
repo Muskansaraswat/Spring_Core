@@ -7,7 +7,8 @@
        http://www.springframework.org/schema/context
        https://www.springframework.org/schema/context/spring-context.xsd">
        
-           <context:annotation-config />
+           <!--In case you want to enable all Annotations used in the project
+           <context:annotation-config />-->
            
           <bean class="com.springcore.lifecycle.Book" name="Book1" init-method="init" destroy-method="destroy">
 			<property name="price" value="548.98" />
@@ -17,5 +18,7 @@
 		</bean>
 		<bean class="com.springcore.lifecycle.Pen" name="Pen1">
 			<property name="color" value="Black" />
-		</bean>	 
+		</bean>	
+		<!-- In case you want to enable particular Annotations then you will use this-->
+		<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/> 
 </beans>
