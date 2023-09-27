@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:util="http://www.springframework.org/schema/util"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+https://www.springframework.org/schema/util/spring-util.xsd">
+
+ <!--standalone list-->
+  <util:list list-class="java.util.LinkedList" id="mybestfriends">
+	  <value>Andrew</value>
+	  <value>Bob</value>
+	  <value>Charles</value>
+	  <value>David</value>
+	  <value>Emiley</value>
+  </util:list>
+  
+  <util:map map-class="java.util.TreeMap" id="mycourses">
+	  <entry key="Laravel Framework" value="7000"/>
+	  <entry key="C programming"><value>500</value></entry>
+	  <entry key="JAVA programming"><value>5000</value></entry>
+	  <entry key="Spring Framework" value="8000"/>
+  </util:map>
+  
+  <util:properties id="dbconfig">
+	  <prop key="jdbcurl">jdbc:postgresql://localhost:5432/muskansaraswat</prop>
+	  <prop key="database">cag_schema</prop>
+	  <prop key="username">Muskan Saraswat</prop>
+	  <prop key="password">9876</prop>
+  </util:properties>
+  
+  <bean class="com.springcore.standalone.collections.Person" name="person1">
+	  <property name="friends" ref="mybestfriends" />
+	  <property name="feeStructure" ref="mycourses" />
+	  <property name="props" ref="dbconfig" />
+	  <!--
+	  	<property name="friends">
+			  <ref bean="mybestfriends"/>
+		  </property>
+	  -->
+  </bean>
+</beans>
