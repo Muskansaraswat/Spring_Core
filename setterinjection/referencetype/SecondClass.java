@@ -1,4 +1,4 @@
-package com.springcore.referencetype;
+package com.springcore.setterinjection.referencetype;
 
 public class SecondClass {
 	private int num2;

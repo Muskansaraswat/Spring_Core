@@ -1,4 +1,4 @@
-package com.springcore.referencetype;
+package com.springcore.setterinjection.referencetype;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ApplicationContext context=new ClassPathXmlApplicationContext("com/springcore/referencetype/refconfig.xml");
+		ApplicationContext context=new ClassPathXmlApplicationContext("com/springcore/setterinjection/referencetype/refconfig.xml");
 		FirstClass fc=(FirstClass) context.getBean("firstref");
 		System.out.println(fc.getNum1());
 		System.out.println(fc.getOb());

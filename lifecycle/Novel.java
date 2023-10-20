@@ -11,7 +11,7 @@ public class Novel implements InitializingBean,DisposableBean{
 		}
 
 		public void setPrice(double price) {
-			System.out.println("Setting Novel Color");
+			System.out.println("Setting Novel Price");
 			this.price = price;
 		}
 

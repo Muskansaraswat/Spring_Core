@@ -14,7 +14,7 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		</property>
 		
 	</bean>
-	<bean class="com.springcore.auto.wire.Address" name="address1">
+	<bean class="com.springcore.auto.wire.xml.Address" name="address1">
 	
 		<property name="street">
 			<value>Hinjwadi High Streets</value>
@@ -29,6 +29,6 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		 byType -check for the type
 		 constructor -calls constructor of employee class
 	-->
-	<bean class="com.springcore.auto.wire.Employee" name="emp1" autowire="constructor" />
+	<bean class="com.springcore.auto.wire.xml.Employee" name="emp1" autowire="constructor" />
 	
 </beans>
